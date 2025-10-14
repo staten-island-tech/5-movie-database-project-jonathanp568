@@ -48,11 +48,8 @@ data = json.load(movies)
 #     else:
 #         list += 1
 
-list = 0
+
 prompt = input("Movie genre:")
-while list != 14117:
-    if prompt == data[list]["genres"]:
-        print(data[list]["title"])
-        list += 1
-    else:
-        list += 1
+for i in data:
+    if prompt == data["genres"]:
+        print(data["title"])
